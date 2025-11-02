@@ -20,7 +20,6 @@ body {
 }
 
 .form-container:hover {
-   
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -80,4 +79,29 @@ body {
 
 .form-container p a:hover {
   text-decoration: underline;
+}
+
+/* ✅ Responsive for mobile (max width: 450px) */
+@media (max-width: 450px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 320px;
+    padding: 30px 20px;
+    margin-top: 60px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 14px;
+  }
 }
