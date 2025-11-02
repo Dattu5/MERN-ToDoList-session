@@ -109,3 +109,24 @@ body {
 .todo-list button:hover {
   background-color: #d93636;
 }
+/* Mobile responsiveness */
+@media (max-width: 450px) {
+  .todo-container {
+    width: 90%; /* container takes 90% of screen width */
+    padding: 30px 20px; /* slightly smaller padding */
+  }
+
+  .todo-container h1 {
+    font-size: 20px; /* slightly smaller title */
+  }
+
+  .todo-container input,
+  .todo-container .add-btn {
+    font-size: 14px; /* adjust input/button text */
+  }
+
+  .todo-list button {
+    padding: 4px 8px; /* smaller delete button */
+    font-size: 12px;
+  }
+}
