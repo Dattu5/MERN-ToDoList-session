@@ -8,7 +8,7 @@ const app = express();
 const PORT = 5000; 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3000', // React app URL
+  origin: 'https://mern-to-do-list-session.vercel.app/', // React app URL
   credentials: true
 }));
 
