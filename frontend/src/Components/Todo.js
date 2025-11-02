@@ -9,7 +9,7 @@ function Todo() {
  const addTask = async () => {
   if (task.trim() === "") return;
 
-  const response = await fetch('http://localhost:5000/add', {
+  const response = await fetch('https://mern-todolist-session.onrender.com/add', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     credentials: 'include', // important to send session cookie
@@ -42,7 +42,7 @@ function Todo() {
   setTodos(todos.filter(t => t !== todo));
 
   // Remove from backend
-  const response = await fetch(`http://localhost:5000/delete/${todo._id}`, {
+  const response = await fetch(`https://mern-todolist-session.onrender.com/delete/${todo._id}`, {
     method: 'DELETE',
       credentials: 'include'  // <-- important
 
