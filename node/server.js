@@ -28,6 +28,7 @@ const userSchema = new mongoose.Schema({
 
 // User model
 const User = mongoose.model('User', userSchema);
+app.set('trust proxy', 1);
 
 // Configure session
 app.use(session({
