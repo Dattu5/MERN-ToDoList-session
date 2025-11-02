@@ -17,6 +17,7 @@ mongoose.connect('mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@clust
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+app.get("/", (req, res) => res.send("Backend working and MongoDB connected!"));
 
 // User schema
 const userSchema = new mongoose.Schema({
