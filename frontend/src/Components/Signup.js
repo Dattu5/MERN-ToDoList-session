@@ -16,6 +16,7 @@ async function Submit() {
 const response = await fetch('https://mern-todolist-session.onrender.com/signup', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
+   credentials: 'include',
   body: JSON.stringify({name,email,password})
 });
 const data=await  response.json();
