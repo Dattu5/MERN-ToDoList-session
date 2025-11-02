@@ -8,7 +8,7 @@ const app = express();
 const PORT = 5000; 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://mern-to-do-list-session.vercel.app', // React app URL
+  origin: 'https://mern-to-do-list-session-uh1d.vercel.app', // React app URL
   credentials: true
 }));
 
@@ -38,7 +38,11 @@ app.use(session({
     mongoUrl: 'mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@cluster0.ixnbsd0.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0', // store sessions in same DB
     collectionName: 'sessions'
   }),
-  cookie: { maxAge: 1000 * 60 * 60 } // 1 hour
+  cookie: { maxAge: 1000 * 60 * 60, cookie: { 
+    maxAge: 1000 * 60 * 60, // 1 hour
+    secure: true,            // required for cross-site cookies
+    sameSite: 'none'         // required for cross-site cookies
+  } } // 1 hour
 }));
 
 
