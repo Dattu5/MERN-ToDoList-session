@@ -15,7 +15,7 @@ const response = await fetch('https://mern-todolist-session.onrender.com/login',
     credentials: 'include',   // <-- important for session
 
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({name,email})
+  body: JSON.stringify({email})
 });
 const data=await  response.json();
 if(data.success){
