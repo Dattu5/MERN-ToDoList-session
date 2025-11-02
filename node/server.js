@@ -34,7 +34,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: 'mongodb://127.0.0.1:27017/mydb', // store sessions in same DB
+    mongoUrl: 'mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@cluster0.ixnbsd0.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0', // store sessions in same DB
     collectionName: 'sessions'
   }),
   cookie: { maxAge: 1000 * 60 * 60 } // 1 hour
