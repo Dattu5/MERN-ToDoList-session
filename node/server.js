@@ -13,7 +13,7 @@ app.use(cors({
 }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/mydb', {
+mongoose.connect('mongodb+srv://dattatreyagokhale_db_user:MAkO0xrpeCxp3FP2@cluster0.ixnbsd0.mongodb.net/mydb?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
